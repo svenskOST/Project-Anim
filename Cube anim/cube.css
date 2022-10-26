@@ -66,8 +66,8 @@ body
 .container .cube div span:hover
 {
     transition: 0s;
-   
-    filter: drop-shadow(0 0 30px #f8f8f8);
+    background: #ef4149;
+    filter: drop-shadow(0 0 30px #ef4149);
 }
 .container .cube div span::before
 {
@@ -84,7 +84,7 @@ body
 .container .cube div span:hover::before
 {
     transition: 0s;
-   
+    background: #f75d64;
 }
 .container .cube div span::after
 {
@@ -102,5 +102,5 @@ body
 .container .cube div span:hover::after
 {
     transition: 0s;
-    
+    background: #f14e55;
 }
