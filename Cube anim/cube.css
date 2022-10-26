@@ -1,60 +1,58 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #25335b;
+    background: #4b434d;
 }
-.container
-{
+
+.container {
     position: relative;
     top: -80px;
     transform: skewY(-20deg);
     animation: animate 5s linear infinite;
 }
-@keyframes animate
-{
-    0%
-    {
+
+@keyframes animate {
+    0% {
         filter: hue-rotate(0deg);
     }
-        0%
-    {
+
+    0% {
         filter: hue-rotate(0deg);
     }
 }
-.container .cube
-{
+
+.container .cube {
     position: relative;
     z-index: 2;
 }
-.container .cube:nth-child(2)
-{
+
+.container .cube:nth-child(2) {
     z-index: 1;
     translate: -60px -60px;
 }
-.container .cube:nth-child(3)
-{
+
+.container .cube:nth-child(3) {
     z-index: 3;
     translate: 60px 60px;
 }
-.container .cube div
-{
+
+.container .cube div {
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 30px;
     translate: calc(-70px * var(--x)) calc(-60px * var(--y));
 }
-.container .cube div span
-{
+
+.container .cube div span {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -63,14 +61,14 @@ body
     z-index: calc(1 * var(--i));
     transition: 1.5s;
 }
-.container .cube div span:hover
-{
+
+.container .cube div span:hover {
     transition: 0s;
     background: #ef4149;
     filter: drop-shadow(0 0 30px #ef4149);
 }
-.container .cube div span::before
-{
+
+.container .cube div span::before {
     content: '';
     position: absolute;
     left: -40px;
@@ -81,13 +79,13 @@ body
     transform: skewY(45deg);
     transition: 1.5s;
 }
-.container .cube div span:hover::before
-{
+
+.container .cube div span:hover::before {
     transition: 0s;
     background: #f75d64;
 }
-.container .cube div span::after
-{
+
+.container .cube div span::after {
     content: '';
     position: absolute;
     top: -40px;
@@ -99,8 +97,8 @@ body
     transform: skewX(45deg);
     transition: 1.5s;
 }
-.container .cube div span:hover::after
-{
+
+.container .cube div span:hover::after {
     transition: 0s;
     background: #f14e55;
 }
