@@ -24,7 +24,7 @@ body {
 
 .container .cigarette {
     transform-style: preserve-3d;
-    animation: animate 15s linear infinite;
+    animation: animate 30s ease-in-out infinite;
 }
 
 @keyframes animate {
@@ -32,8 +32,12 @@ body {
         transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
 
+    50% {
+        transform: perspective(1000px) rotateX(360deg) rotateY(360deg) rotateZ(260deg);
+    }
+
     100% {
-        transform: perspective(1000px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
 }
 
