@@ -4,13 +4,24 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    min-height: 110vh;
     background: #222;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+svg {
+    position: fixed;
+    z-index: 1;
+    transition: 3s ease-in-out;
+}
+
+/*@media queries som positionerar svgn i mitten av x axeln när fönstret är mindre än en viss storlek (när contenten visas i kolumn), tex @media max(?px)*/
 
 #loading {
     position: fixed;
@@ -18,9 +29,4 @@ body {
     height: 100vh;
     background: #222;
     transition-duration: 1s;
-}
-
-#logo {
-    z-index: 1;
-    transition: 3s ease-in-out;
 }
