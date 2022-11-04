@@ -1,6 +1,6 @@
 var theme = document.getElementById("themeselector")
 var svg = document.getElementsByTagName("svg")[0]
-var scrollbar = document.getElementsByName("::-webkit-scrollbar")
+var scrollbar = document.getElementsByTagName("::-webkit-scrollbar")
 
 if(theme == "standard"){
     svg.setAttribute("stroke", "purple")

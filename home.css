@@ -16,6 +16,7 @@
 }
 
 body {
+    overflow: hidden;
     min-height: 110vh;
     background: #222;
 }
