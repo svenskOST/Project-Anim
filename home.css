@@ -1,3 +1,7 @@
+:root {
+    --scrollbar: rgba(0,0,0,0);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +13,17 @@
 
 ::-webkit-scrollbar-thumb {
     background: purple;
+    border-radius: 15px;
+    background-color: var(--scrollbar);
+    transition-duration: 1s;
 }
 
 ::-webkit-scrollbar-track {
-    background: #888;
+    display: none;
 }
 
 body {
-    overflow: hidden;
-    min-height: 110vh;
+    min-height: 200vh;
     background: #222;
 }
 
@@ -28,7 +34,7 @@ svg {
     left: 0;
     z-index: 1;
 }
-
+/*z index på scrollbar istället/loading, overflow på nått sätt
 /*@media queries som positionerar svgn i mitten av x axeln när fönstret är mindre än en viss storlek (när contenten visas i kolumn), tex @media max(?px)*/
 
 #loading {
