@@ -1,4 +1,3 @@
-var root = document.documentElement
 var body = document.getElementsByTagName("body")[0]
 var loading = document.getElementById("loading")
 var svg = document.getElementsByTagName("svg")[0]
@@ -20,7 +19,6 @@ setTimeout(function () {
     setTimeout(function () {
         svg.style.transition = 0
         loading.style.opacity = 0
-        root.style.setProperty("--scrollbar", "purple")
         setTimeout(function () {
             body.style.transitionDuration = 0
             loading.style.display = "none"

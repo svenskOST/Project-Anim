@@ -1,7 +1,3 @@
-:root {
-    --scrollbar: rgba(0,0,0,0);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -12,19 +8,40 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: purple;
+    background-color: purple;
     border-radius: 15px;
-    background-color: var(--scrollbar);
-    transition-duration: 1s;
 }
 
 ::-webkit-scrollbar-track {
     display: none;
 }
 
-body {
-    min-height: 200vh;
+#loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #222;
+    transition-duration: 1s;
+}
+
+#background {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+}
+
+#content {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200vh;
 }
 
 svg {
@@ -34,13 +51,4 @@ svg {
     left: 0;
     z-index: 1;
 }
-/*z index på scrollbar istället/loading, overflow på nått sätt
 /*@media queries som positionerar svgn i mitten av x axeln när fönstret är mindre än en viss storlek (när contenten visas i kolumn), tex @media max(?px)*/
-
-#loading {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: #222;
-    transition-duration: 1s;
-}
