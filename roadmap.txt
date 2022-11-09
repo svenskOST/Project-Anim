@@ -1,0 +1,35 @@
+For v1.0.0 Beta:
+- Finnish custom scrollbar and fix remaining problems.
+
+- Replace placeholders with content.
+
+- Make media queries and make website flexible andd mobile optimized.
+
+- Add loading wheel animation on the loading screen.
+
+- Implement search function, located at top of the page mirrored to the logo. Styled something like Amin's searchbar and functioning like that script Simon wrote on his camera website.
+  Searching then either brings you to that anim on the page, or maybe a whole new page with just that anim.
+
+- Implement and finnish themes. These can be changed from settings in the navbar. It shows the options and you select one and press 'Apply', which then brings up the loading screen,
+  and kind of reverse logo animation like the startup. The logo changes theme first, then it loads for a few seconds before loading screen disappears again revealing a newly themed page.
+
+- Make the interactive navbar (from YouTube). Contains settings for themes, 'About Project Anim', 'Contact me', bring back to top (home button) etc.
+
+
+For v1.0.0:
+- Here the website is more sophisticated, with overall changes to scrolling and content layout.
+
+- The top of the page will not show any anims, there'll be no scrollbar. To be displayed here is the logo, searchbar, intro text and description, and a 'Start journey' button that you have to
+  hold for a second or two, to be brought down to the anims (a bar outside the circle that fills as you hold).
+
+- At the first anim there'll be a text pointing at the, at first invisible, progress bar. This text explains the navigation of the webstie. "Scroll to advance to the next anim!"
+  No conventional scrolling on the website, instead the anim is fixed until the user scrolls x amount within y interval. Ther'll be a progress bar of some sort that fills rather quickly
+  as you scroll, and show percentage. If not filled within y interval it resets. If filled it will bring the user to the next anim, all animated. First the new anims background goes up, then
+  the contents of that anim follow at mixed speeds. Make these ease in ease out, maybe even with a "bouncing" effect. Disable scrolling during these transfers. Then display = none on the
+  previous anim. Also make this function backwards. Could make it so the next anims background goes up a bit immeadiatly when scrolling but bounces back.
+
+
+Beyond:
+- Add anims (own ideas, DVD bouncing, fataltotheflesh.com, YouTube tutorials).
+
+- Account functions (just for testing)? Can have exclusive anims to members.
