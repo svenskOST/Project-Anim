@@ -1,5 +1,5 @@
 For v1.0.0 Beta:
-- Finnish custom scrollbar and fix remaining problems.
+- Finnish custom scrollbar (drag is left) and fix remaining problems.
 
 - Replace placeholders with content.
 
