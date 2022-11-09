@@ -1,7 +1,7 @@
-var body = document.getElementsByTagName("body")[0]
 var loading = document.getElementById("loading")
-var svg = document.getElementsByTagName("svg")[0]
-var originalsvg = svg.getBoundingClientRect()
+var content = document.getElementById("content")
+var logo = document.getElementById("logo")
+var originallogo = logo.getBoundingClientRect()
 
 window.scrollTo(0, 0)
 window.onscroll = function() {
@@ -9,22 +9,23 @@ window.onscroll = function() {
 }
 
 setTimeout(function () {
-    svg.style.transition = "2s ease-in-out"
-    svg.style.transform = "translate(0, 0)"
-    svg.style.left = "30px"
-    svg.style.top = "30px"
-    svg.setAttribute("width", originalsvg.width * 0.6 + "px")
-    svg.setAttribute("height", originalsvg.height * 0.6 + "px")
-    svg.setAttribute("stroke-width", 5)
+    logo.style.transition = "2s ease-in-out"
+    logo.style.transform = "translate(0, 0)"
+    logo.style.left = "30px"
+    logo.style.top = "30px"
+    logo.setAttribute("width", originallogo.width * 0.6 + "px")
+    logo.setAttribute("height", originallogo.height * 0.6 + "px")
+    logo.setAttribute("stroke-width", 5)
     setTimeout(function () {
-        svg.style.transition = 0
+        logo.style.transition = 0
         loading.style.opacity = 0
         setTimeout(function () {
-            body.style.transitionDuration = 0
             loading.style.display = "none"
             window.onscroll = function() {}
+            content.appendChild(logo)
         }, 1000)
     }, 2000)
-}, 6000)
+}, 5000)
 
 //lägga till loading animation (såndär hjulgrej)
+//för att fixa att logo inte hänger med vid scroll: appendchild så den tillhör #content igen när man kan skrolla igen

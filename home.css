@@ -16,6 +16,14 @@
     display: none;
 }
 
+#logo {
+    position: absolute;
+    transform: translate(calc(50vw - 375px), calc(50vh - 60px));
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 #loading {
     position: fixed;
     top: 0;
@@ -44,11 +52,12 @@
     height: 200vh;
 }
 
-svg {
+#container {
     position: absolute;
-    transform: translate(calc(50vw - 375px), calc(50vh - 60px));
-    top: 0;
-    left: 0;
-    z-index: 1;
+    left: 100px;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
 }
 /*@media queries som positionerar svgn i mitten av x axeln när fönstret är mindre än en viss storlek (när contenten visas i kolumn), tex @media max(?px)*/
