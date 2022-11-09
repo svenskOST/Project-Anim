@@ -1,7 +1,9 @@
+var scrollbar = document.getElementById("scrollbar")
 var loading = document.getElementById("loading")
 var content = document.getElementById("content")
 var logo = document.getElementById("logo")
 var originallogo = logo.getBoundingClientRect()
+var anim1 = document.getElementById("anim1")
 
 window.scrollTo(0, 0)
 window.onscroll = function() {
@@ -19,6 +21,11 @@ setTimeout(function () {
     setTimeout(function () {
         logo.style.transition = 0
         loading.style.opacity = 0
+        scrollbar.style.transitionDuration = "1s"
+            scrollbar.style.height = ( window.innerHeight / (anim1.clientHeight * 4 + 130) * 100 + "%")
+            setTimeout(function () {
+                scrollbar.style.transitionDuration = "0s" 
+            }, 1000)
         setTimeout(function () {
             loading.style.display = "none"
             window.onscroll = function() {}
@@ -27,5 +34,5 @@ setTimeout(function () {
     }, 2000)
 }, 5000)
 
+
 //lägga till loading animation (såndär hjulgrej)
-//för att fixa att logo inte hänger med vid scroll: appendchild så den tillhör #content igen när man kan skrolla igen

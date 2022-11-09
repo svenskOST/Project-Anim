@@ -1,25 +1,27 @@
+var root = document.documentElement
 var theme = document.getElementById("themeselector")
 var svg = document.getElementsByTagName("svg")[0]
-var scrollbar = document.getElementsByTagName("::-webkit-scrollbar")
 
 if(theme == "standard"){
     svg.setAttribute("stroke", "purple")
-    scrollbar.style.background = "purple"
+    root.style.setProperty("--scrollbar-color", "purple")
+    root.style.setProperty("--scrollbar-hover", "rgb(100, 0, 100)")
 }
 
 if(theme == "matteblack"){
     svg.setAttribute("stroke", "black")
-    scrollbar.style.background = "black"
+    root.style.setProperty("--scrollbar-color", "black")
+    root.style.setProperty("--scrollbar-hover", "grey")
 }
 
 if(theme == "neon"){
     svg.setAttribute("stroke", temp)
-    scrollbar.style.background = temp
+    root.style.setProperty("--scrollbar-color", temp)
+    root.style.setProperty("--scrollbar-hover", temp)
 }
 
 if(theme == "rgb"){
     svg.setAttribute("stroke", temp)
-    scrollbar.style.background = temp
+    root.style.setProperty("--scrollbar-color", temp)
+    root.style.setProperty("--scrollbar-hover", temp)
 }
-
-//scrollbar funkar inte än, bara som placeholder (vet inte hur jag kan accessa ::-webkit-scrollbar)
