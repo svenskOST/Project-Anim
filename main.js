@@ -30,15 +30,26 @@ setTimeout(function () {
                 var scrollfactor = background.scrollTop / (anim1.clientHeight * 4 + 130)
                 scrollbar.style.top = window.innerHeight * scrollfactor + "px"
             }
-            scrollbar.onmouseenter = scrolldrag
-            function scrolldrag() {
-                document.onmousedown = function() {
-                    console.log("hi")
-                    var scrollcurrent = background.scrollTop
-                    let x = scrollcurrent // +/- musens rörelse
-                    background.scrollTo(0, x)
+
+            document.addEventListener("mousedown", function() {
+                let mousedown = true
+                document.addEventListener("mouseup", function() {
+                    if(mousedown) {
+                        mousedown = false
+                    }
+                })    
+                function drag() {
+                    if(mousedown) {
+                        //dragscroll = originalscroll +/- delta av musen
+                        background.scrollTo(0, dragscroll)
+                        requestAnimationFrame(drag)
+                    }
+                    else {
+                        console.log("Ok now it stopped")
+                    }
                 }
-            }
+                drag()
+            })
 
         }, 1000)
 
