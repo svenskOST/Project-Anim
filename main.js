@@ -31,23 +31,40 @@ setTimeout(function () {
                 scrollbar.style.top = window.innerHeight * scrollfactor + "px"
             }
 
-            document.addEventListener("mousedown", function() {
+            document.addEventListener("mousedown", function(mouse) {
+                let originalscroll = background.scrollTop
+                let mouseposition = mouse.screenY
                 let mousedown = true
                 document.addEventListener("mouseup", function() {
                     if(mousedown) {
                         mousedown = false
                     }
                 })    
-                function drag() {
+                document.addEventListener("mousemove", function drag(mouse2){
+                    let mousenewposition = mouse2.screenY
                     if(mousedown) {
-                        //dragscroll = originalscroll +/- delta av musen
+                        let mousedelta
+                        console.log(mouseposition)
+                        console.log(mousenewposition)
+                        if(mouseposition < mousenewposition){
+                            mousedelta = mousenewposition - mouseposition
+                        }
+                        else{
+                            mousedelta = -(mouseposition - mousenewposition)
+                        }
+                        let dragscroll = originalscroll + (mousedelta / background.clientHeight * 100)
+                        console.log("dragscroll " + dragscroll)
+                        console.log("originalscroll " + originalscroll)
+                        console.log("mousedelta " + mousedelta)
+                        console.log("background.clientHeight " + background.clientHeight)
                         background.scrollTo(0, dragscroll)
                         requestAnimationFrame(drag)
                     }
                     else {
                         console.log("Ok now it stopped")
                     }
-                }
+                }) 
+                
                 drag()
             })
 
